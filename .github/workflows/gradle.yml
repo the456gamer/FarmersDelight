@@ -11,9 +11,6 @@ on:
   push:
     branches: [ "1.18.2-fix-rer" ]
 
-permissions:
-  contents: read
-
 jobs:
   build:
 
@@ -33,7 +30,7 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: outjar
-        path: build/lib/*.jar
+        path: build/libs/*.jar
     - name: Create Github Release
       id: github-release
       uses: softprops/action-gh-release@v1
